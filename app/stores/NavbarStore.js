@@ -23,6 +23,7 @@ class NavbarStore {
     
     onUpdateOnlineUsers(data) {
         this.onlineUsers = data.onlineUsers;
+        console.log(this.onlineUsers);
     }
     
     onUpdateAjaxAnimation(className) {

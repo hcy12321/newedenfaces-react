@@ -35,7 +35,7 @@ gulp.task('vendor', function() {
 
 gulp.task('browserify-vendor', function () {
     return browserify().require(dependencies).bundle().pipe(source('vendor.bundle.js'))
-        .pipe(gulpif(production, streamify(uglify({mangle:false})))).pipe(gulp.dest('public.js'));
+        .pipe(gulpif(production, streamify(uglify({mangle:false})))).pipe(gulp.dest('public/js'));
 })
 
 gulp.task('browserify', ['browserify-vendor'], function () {
@@ -58,7 +58,7 @@ gulp.task('browserify-watch', ['browserify-vendor'], function () {
             gutil.log(gutil.colors.red(err.toString()));
         }).on('end', function () {
             gutil.log(gutil.colors.green('Finished rebundling in', (Date.now() - start) + 'ms.'));
-        }).pipe(source('bundle.js')).pipe(gulp.dest('public/js/'));
+        }).pipe(source('bundle.js')).pipe(gulp.dest('public/js'));
     }
 })
 

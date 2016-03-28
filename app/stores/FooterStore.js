@@ -8,8 +8,8 @@ class FooterStore {
     }
     
     onGetTopCharactersSuccess(data) {
-        console.log(data);
         this.characters = data.slice(0,5);
+        this.characters = [{"characterId":1},{"characterId":2}];
     }
     
     onGetTopCharactersFail(jqXhr) {

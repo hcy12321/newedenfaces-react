@@ -237,7 +237,6 @@ var Footer = (function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            console.log(this.state);
             var leaderboardCharacters = this.state.characters.map(function (character) {
                 return _react2['default'].createElement(
                     'li',
@@ -1232,8 +1231,8 @@ var FooterStore = (function () {
     _createClass(FooterStore, [{
         key: 'onGetTopCharactersSuccess',
         value: function onGetTopCharactersSuccess(data) {
-            console.log(data);
             this.characters = data.slice(0, 5);
+            this.characters = [{ "characterId": 1 }, { "characterId": 2 }];
         }
     }, {
         key: 'onGetTopCharactersFail',
@@ -1299,6 +1298,7 @@ var NavbarStore = (function () {
         key: 'onUpdateOnlineUsers',
         value: function onUpdateOnlineUsers(data) {
             this.onlineUsers = data.onlineUsers;
+            console.log(this.onlineUsers);
         }
     }, {
         key: 'onUpdateAjaxAnimation',
