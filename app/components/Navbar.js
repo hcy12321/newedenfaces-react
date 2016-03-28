@@ -10,7 +10,7 @@ class Navbar extends React.Component {
         this.onChange = this.onChange.bind(this);
     }
     
-    ComponentDidMount() {
+    componentDidMount() {
         NavbarStore.listen(this.onChange);
         NavbarActions.getCharacterCount();
         

@@ -39,7 +39,6 @@ var onlineUsers = 0;
 
 io.sockets.on('connection', function(socket){
     ++onlineUsers;
-    
     io.sockets.emit('onlineUsers', { onlineUsers: onlineUsers});
     
     socket.on('disconnect', function() {
