@@ -228,12 +228,12 @@ var AddCharacter = (function (_React$Component) {
             var gender = this.state.gender;
 
             if (!name) {
-                _actionsAddCharacterActions2['default'].invaildName();
+                _actionsAddCharacterActions2['default'].invalidName();
                 this.refs.nameTextField.getDOMNode().focus();
             }
 
             if (!gender) {
-                _actionsAddCharacterActions2['default'].invaildGender();
+                _actionsAddCharacterActions2['default'].invalidGender();
             }
 
             if (name && gender) {
@@ -1522,7 +1522,7 @@ var FooterStore = (function () {
         key: 'onGetTopCharactersSuccess',
         value: function onGetTopCharactersSuccess(data) {
             this.characters = data.slice(0, 5);
-            this.characters = [{ "characterId": 1 }, { "characterId": 2 }];
+            //this.characters = [{"characterId":1},{"characterId":2}];
         }
     }, {
         key: 'onGetTopCharactersFail',

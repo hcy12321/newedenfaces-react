@@ -28,12 +28,12 @@ class AddCharacter extends React.Component {
         var gender = this.state.gender;
         
         if (!name) {
-            AddCharacterActions.invaildName();
+            AddCharacterActions.invalidName();
             this.refs.nameTextField.getDOMNode().focus();
         }
         
         if (!gender) {
-            AddCharacterActions.invaildGender();
+            AddCharacterActions.invalidGender();
         }
         
         if (name && gender) {
